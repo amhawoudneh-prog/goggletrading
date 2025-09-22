@@ -1,0 +1,268 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft, Phone, Mail, AlertTriangle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Separator } from "@/components/ui/separator"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+
+export default function AmmoniumAlumPage() {
+  return (
+    <div className="min-h-screen py-16 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        {/* Navigation */}
+        <div className="mb-8">
+          <Link
+            href="/products"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Products
+          </Link>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Product Image */}
+          <div className="space-y-4">
+            <div className="aspect-square bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+              <Image
+                src="/images/ammonium-alum.jpeg"
+                alt="Ammonium Alum Crystals"
+                width={600}
+                height={600}
+                className="w-full h-full object-contain p-8"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Product Details */}
+          <div className="space-y-6">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Badge
+                  variant="secondary"
+                  className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                >
+                  Laboratory Chemical
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="border-green-200 text-green-800 dark:border-green-800 dark:text-green-200"
+                >
+                  In Stock
+                </Badge>
+              </div>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ammonium Alum</h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300">
+                High-purity ammonium alum crystals (NH₄Al(SO₄)₂·12H₂O) for water treatment, analytical chemistry, and
+                industrial applications.
+              </p>
+            </div>
+
+            {/* Safety Alert */}
+            <Alert className="border-yellow-200 bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-900/20">
+              <AlertTriangle className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+              <AlertDescription className="text-yellow-800 dark:text-yellow-200">
+                Handle with care. Use appropriate safety equipment including gloves and eye protection.
+              </AlertDescription>
+            </Alert>
+
+            {/* Key Features */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Key Features</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    High purity crystalline form
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Excellent coagulating properties
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Water-soluble and stable
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Food-grade quality available
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Long shelf life when stored properly
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Specifications */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Specifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Chemical Formula:</span>
+                    <p className="text-gray-600 dark:text-gray-400">NH₄Al(SO₄)₂·12H₂O</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Molecular Weight:</span>
+                    <p className="text-gray-600 dark:text-gray-400">453.33 g/mol</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Purity:</span>
+                    <p className="text-gray-600 dark:text-gray-400">≥99%</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Appearance:</span>
+                    <p className="text-gray-600 dark:text-gray-400">Clear crystals</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Solubility:</span>
+                    <p className="text-gray-600 dark:text-gray-400">Soluble in water</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">pH (5% solution):</span>
+                    <p className="text-gray-600 dark:text-gray-400">4.0 - 5.0</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Applications */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Applications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 gap-2 text-gray-700 dark:text-gray-300">
+                  <p>• Water purification and treatment</p>
+                  <p>• Coagulation and flocculation processes</p>
+                  <p>• Analytical chemistry reagent</p>
+                  <p>• Food processing (as approved additive)</p>
+                  <p>• Textile industry applications</p>
+                  <p>• Laboratory research and education</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Contact Information */}
+            <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
+              <CardContent className="pt-6">
+                <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+                  Get Quote & More Information
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-green-800 dark:text-green-200">
+                    <Phone className="w-4 h-4 mr-3" />
+                    <span>+251 94 976 4843</span>
+                  </div>
+                  <div className="flex items-center text-green-800 dark:text-green-200">
+                    <Mail className="w-4 h-4 mr-3" />
+                    <span>info@goggletrading.com</span>
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-4">
+                  <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 border-green-600 text-green-600 hover:bg-green-50 dark:border-green-400 dark:text-green-400 bg-transparent"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Us
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        <Separator className="my-12 dark:bg-gray-700" />
+
+        {/* Related Products */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Related Laboratory Chemicals</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <CardContent className="p-4">
+                <div className="aspect-square bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                  <Image
+                    src="/images/potassium-aluminum-sulphate.webp"
+                    alt="Potassium Aluminum Sulphate"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Potassium Aluminum Sulphate</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  White crystalline granules for flocculation processes
+                </p>
+                <Link href="/products/laboratory/potassium-aluminum-sulphate">
+                  <Button variant="outline" size="sm" className="w-full bg-transparent">
+                    View Details
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <CardContent className="p-4">
+                <div className="aspect-square bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                  <Image
+                    src="/images/flocculating-powder.jpeg"
+                    alt="Flocculating Powder"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Flocculating Powder</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  White granular powder for water treatment
+                </p>
+                <Link href="/products/laboratory/flocculating-powder">
+                  <Button variant="outline" size="sm" className="w-full bg-transparent">
+                    View Details
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <CardContent className="p-4">
+                <div className="aspect-square bg-gray-50 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                  <Image
+                    src="/images/ammonium-hydroxide.jpeg"
+                    alt="Ammonium Hydroxide"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Ammonium Hydroxide</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  Clear reagent bottle with ammonium hydroxide solution
+                </p>
+                <Link href="/products/laboratory/ammonium-hydroxide">
+                  <Button variant="outline" size="sm" className="w-full bg-transparent">
+                    View Details
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}

@@ -1,0 +1,180 @@
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft, Phone, Mail, AlertTriangle } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+
+export default function AmmoniaPage() {
+  return (
+    <div className="min-h-screen py-16 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        {/* Navigation */}
+        <div className="mb-8">
+          <Link
+            href="/products"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Products
+          </Link>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Product Image */}
+          <div className="space-y-4">
+            <div className="aspect-square bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+              <Image
+                src="/images/ammonia.jpeg"
+                alt="Ammonia Industrial Strength Solution"
+                width={600}
+                height={600}
+                className="w-full h-full object-contain p-8"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Product Details */}
+          <div className="space-y-6">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Badge
+                  variant="secondary"
+                  className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                >
+                  Laboratory Chemical
+                </Badge>
+                <Badge variant="destructive" className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                  Hazardous
+                </Badge>
+              </div>
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ammonia Solution</h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300">
+                Industrial strength ammonia solution (70%) for laboratory applications, cleaning, and industrial
+                processes.
+              </p>
+            </div>
+
+            {/* Safety Alert */}
+            <Alert className="border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-900/20">
+              <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400" />
+              <AlertDescription className="text-red-800 dark:text-red-200">
+                <strong>DANGER:</strong> Corrosive and toxic. Use only in well-ventilated areas with proper safety
+                equipment. Keep container closed when not in use.
+              </AlertDescription>
+            </Alert>
+
+            {/* Key Features */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Key Features</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    High concentration (70% solution)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Industrial grade quality
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Strong alkaline properties
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    Excellent cleaning agent
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>5 US gallon
+                    container
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Specifications */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Specifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Concentration:</span>
+                    <p className="text-gray-600 dark:text-gray-400">70% Solution</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Container Size:</span>
+                    <p className="text-gray-600 dark:text-gray-400">5 US Gallons</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">pH:</span>
+                    <p className="text-gray-600 dark:text-gray-400">11-12 (highly alkaline)</p>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-gray-900 dark:text-white">Grade:</span>
+                    <p className="text-gray-600 dark:text-gray-400">Industrial Strength</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Applications */}
+            <Card className="dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-lg text-gray-900 dark:text-white">Applications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 gap-2 text-gray-700 dark:text-gray-300">
+                  <p>• Laboratory pH adjustment</p>
+                  <p>• Industrial cleaning processes</p>
+                  <p>• Chemical synthesis reactions</p>
+                  <p>• Metal surface treatment</p>
+                  <p>• Analytical chemistry procedures</p>
+                  <p>• Research and development</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Contact Information */}
+            <Card className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
+              <CardContent className="pt-6">
+                <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-4">
+                  Get Quote & More Information
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-green-800 dark:text-green-200">
+                    <Phone className="w-4 h-4 mr-3" />
+                    <span>+251 94 976 4843</span>
+                  </div>
+                  <div className="flex items-center text-green-800 dark:text-green-200">
+                    <Mail className="w-4 h-4 mr-3" />
+                    <span>info@goggletrading.com</span>
+                  </div>
+                </div>
+                <div className="flex gap-3 mt-4">
+                  <Button className="flex-1 bg-green-600 hover:bg-green-700 text-white">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex-1 border-green-600 text-green-600 hover:bg-green-50 dark:border-green-400 dark:text-green-400 bg-transparent"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Us
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
