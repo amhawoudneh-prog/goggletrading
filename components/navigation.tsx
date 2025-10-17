@@ -154,7 +154,7 @@ export function Navigation() {
                 className="hidden md:flex bg-red-800 hover:bg-red-900 dark:bg-red-700 dark:hover:bg-red-800 text-white"
                 size="sm"
               >
-                <a href="tel:+251115509748">
+                <a href="tel:+251911304297">
                   <Phone className="h-4 w-4 mr-2" />
                   Call Now
                 </a>

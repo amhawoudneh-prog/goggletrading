@@ -162,7 +162,7 @@ export default function FlorenceFlasksPage() {
               </Button>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" size="lg" asChild>
-                  <a href="tel:+251949764843">
+                  <a href="tel:+251911304297">
                     <Phone className="mr-2 h-4 w-4" />
                     Call Now
                   </a>

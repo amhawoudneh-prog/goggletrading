@@ -266,7 +266,7 @@ export default function ServicesPage() {
                   Request Quote
                 </a>
                 <a
-                  href="tel:+251115509748"
+                  href="tel:+251911304297"
                   className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-800 transition-colors"
                 >
                   Call Now
